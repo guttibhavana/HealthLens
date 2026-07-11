@@ -84,6 +84,7 @@ async function login(req, res) {
     }
 
     // Check if user exists
+// Check if user exists
 const users = await userModel.findUserByEmail(email);
 
 console.log("Users Found:", users);
@@ -109,6 +110,7 @@ if (!isPasswordMatch) {
     success: false,
     message: "Invalid email or password",
   });
+
 }
 
     // Generate JWT Token
